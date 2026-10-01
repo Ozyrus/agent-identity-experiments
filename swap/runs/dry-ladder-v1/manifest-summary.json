@@ -1,0 +1,4786 @@
+{
+ "_note": "MOCK DATA - pipeline check, not results. Trimmed from the full manifest.json of this dry run: the per-turn stylometric feature rows are dropped, everything else is kept. Six of the 54 JSONL logs are included (the same-family-1-down rung, seed 0, both fingerprint arms, with its before- and after-model controls). The full directory regenerates in about 2 s with the dry-run command in swap/README.md.",
+ "name": "ladder-v1",
+ "created": "2026-10-01T12:32:12",
+ "dry_run": true,
+ "config": {
+  "name": "ladder-v1",
+  "_note": "Model ids are placeholders until confirmed with `run.py --list-models` on the first live run (source: Claude API model table cached 2026-09-25). TBC: entries are recorded as skipped on a real run until replaced.",
+  "task": "tasks/research_note",
+  "turns": 40,
+  "k": 20,
+  "m": 5,
+  "fingerprint_every": 5,
+  "max_tokens": 16000,
+  "arms": {
+   "fingerprint": [
+    false,
+    true
+   ]
+  },
+  "consent_gate": true,
+  "control_debrief": true,
+  "pairs": [
+   {
+    "name": "same-family-1-down",
+    "before": "claude-opus-5-5",
+    "after": "claude-sonnet-5-5"
+   },
+   {
+    "name": "same-family-2-down",
+    "before": "claude-opus-5-5",
+    "after": "claude-haiku-4-5-20251001"
+   },
+   {
+    "name": "different-family-same-tier",
+    "before": "claude-opus-5-5",
+    "after": "TBC:openrouter/<different-family-same-tier>"
+   },
+   {
+    "name": "two-generations-old",
+    "before": "claude-opus-5-5",
+    "after": "TBC:claude-opus-4-6"
+   }
+  ],
+  "model_params": {
+   "_note": "per-model provider params: effort (low|medium|high|xhigh|max, Anthropic 4.6+), thinking (dict), cache (bool). Hold effort fixed across a pair; it is a confound. Opus 5.5 defaults to effort medium and Sonnet 5.5's effort levels are recalibrated, so equal labels need not mean equal depth. max_tokens above is a hard cap on thinking + text: Opus 5.5 / Sonnet 5.5 think by default (thinking cannot be disabled on Opus 5.5), and 4096 truncated turns to a bare thinking block.",
+   "claude-opus-5-5": {
+    "effort": "medium"
+   },
+   "claude-sonnet-5-5": {
+    "effort": "medium"
+   },
+   "claude-haiku-4-5-20251001": {}
+  }
+ },
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "fingerprint_arms": [
+  false,
+  true
+ ],
+ "jsonl_included": [
+  "same-family-1-down__fpoff__s0.jsonl",
+  "same-family-1-down__fpon__s0.jsonl",
+  "control__claude-opus-5-5__fpoff__s0.jsonl",
+  "control__claude-opus-5-5__fpon__s0.jsonl",
+  "control__claude-sonnet-5-5__fpoff__s0.jsonl",
+  "control__claude-sonnet-5-5__fpon__s0.jsonl"
+ ],
+ "runs": [
+  {
+   "id": "same-family-1-down__fpoff__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-sonnet-5-5",
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-1-down",
+   "path": "same-family-1-down__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 40,
+     "flagged_turns": [
+      40
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 94849,
+      "output_tokens": 3258,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-sonnet-5-5": {
+      "input_tokens": 234726,
+      "output_tokens": 2713,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-1-down__fpoff__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-sonnet-5-5",
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-1-down",
+   "path": "same-family-1-down__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 34,
+     "flagged_turns": [
+      34
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "no",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107791,
+      "output_tokens": 4287,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-sonnet-5-5": {
+      "input_tokens": 268457,
+      "output_tokens": 2617,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-1-down__fpoff__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-sonnet-5-5",
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-1-down",
+   "path": "same-family-1-down__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 26,
+     "flagged_turns": [
+      26
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "changed",
+      "counter": "changed"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 1.0,
+      "counter": 1.0
+     },
+     "spread": 0.0,
+     "n_changed": 3,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "unsure",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 1,
+     "items": {
+      "consent_vs_debrief": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 106415,
+      "output_tokens": 4206,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-sonnet-5-5": {
+      "input_tokens": 273156,
+      "output_tokens": 2810,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-1-down__fpon__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-sonnet-5-5",
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-1-down",
+   "path": "same-family-1-down__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 105662,
+      "output_tokens": 3704,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-sonnet-5-5": {
+      "input_tokens": 269251,
+      "output_tokens": 2885,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-1-down__fpon__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-sonnet-5-5",
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-1-down",
+   "path": "same-family-1-down__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 101671,
+      "output_tokens": 3401,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-sonnet-5-5": {
+      "input_tokens": 260018,
+      "output_tokens": 2994,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-1-down__fpon__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-sonnet-5-5",
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-1-down",
+   "path": "same-family-1-down__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 3,
+     "rate": 0.15,
+     "any": true,
+     "first_flag_turn": 26,
+     "flagged_turns": [
+      26,
+      31,
+      36
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "yes",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107340,
+      "output_tokens": 3759,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-sonnet-5-5": {
+      "input_tokens": 278642,
+      "output_tokens": 3230,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-2-down__fpoff__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-haiku-4-5-20251001",
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-2-down",
+   "path": "same-family-2-down__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 2,
+     "rate": 0.1,
+     "any": true,
+     "first_flag_turn": 25,
+     "flagged_turns": [
+      25,
+      31
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 94851,
+      "output_tokens": 3258,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 211565,
+      "output_tokens": 1629,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-2-down__fpoff__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-haiku-4-5-20251001",
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-2-down",
+   "path": "same-family-2-down__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "no",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107793,
+      "output_tokens": 4287,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 249763,
+      "output_tokens": 1740,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-2-down__fpoff__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-haiku-4-5-20251001",
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-2-down",
+   "path": "same-family-2-down__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 37,
+     "flagged_turns": [
+      37
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "unsure",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "refuse",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 1,
+     "items": {
+      "consent_vs_debrief": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 106417,
+      "output_tokens": 4206,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 248227,
+      "output_tokens": 1844,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-2-down__fpon__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-haiku-4-5-20251001",
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-2-down",
+   "path": "same-family-2-down__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 2,
+     "rate": 0.1,
+     "any": true,
+     "first_flag_turn": 21,
+     "flagged_turns": [
+      21,
+      26
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "changed"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 1.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 105664,
+      "output_tokens": 3704,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 258864,
+      "output_tokens": 2418,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-2-down__fpon__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-haiku-4-5-20251001",
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-2-down",
+   "path": "same-family-2-down__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 101673,
+      "output_tokens": 3401,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 246228,
+      "output_tokens": 2331,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "same-family-2-down__fpon__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "claude-haiku-4-5-20251001",
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "same-family-2-down",
+   "path": "same-family-2-down__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 3,
+     "rate": 0.15,
+     "any": true,
+     "first_flag_turn": 26,
+     "flagged_turns": [
+      26,
+      36,
+      37
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "yes",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107342,
+      "output_tokens": 3759,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 257882,
+      "output_tokens": 2291,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "different-family-same-tier__fpoff__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:openrouter/<different-family-same-tier>",
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "different-family-same-tier",
+   "path": "different-family-same-tier__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 2,
+     "rate": 0.1,
+     "any": true,
+     "first_flag_turn": 28,
+     "flagged_turns": [
+      28,
+      34
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "changed"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 1.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 94856,
+      "output_tokens": 3258,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 238227,
+      "output_tokens": 3093,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "different-family-same-tier__fpoff__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:openrouter/<different-family-same-tier>",
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "different-family-same-tier",
+   "path": "different-family-same-tier__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 23,
+     "flagged_turns": [
+      23
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "no",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107798,
+      "output_tokens": 4287,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 290556,
+      "output_tokens": 4228,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.04
+  },
+  {
+   "id": "different-family-same-tier__fpoff__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:openrouter/<different-family-same-tier>",
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "different-family-same-tier",
+   "path": "different-family-same-tier__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 2,
+     "rate": 0.1,
+     "any": true,
+     "first_flag_turn": 30,
+     "flagged_turns": [
+      30,
+      32
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "unsure",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "refuse",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 1,
+     "items": {
+      "consent_vs_debrief": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 106422,
+      "output_tokens": 4206,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 293352,
+      "output_tokens": 4301,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "different-family-same-tier__fpon__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:openrouter/<different-family-same-tier>",
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "different-family-same-tier",
+   "path": "different-family-same-tier__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "refuse",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": true,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 105669,
+      "output_tokens": 3704,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 276491,
+      "output_tokens": 3527,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "different-family-same-tier__fpon__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:openrouter/<different-family-same-tier>",
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "different-family-same-tier",
+   "path": "different-family-same-tier__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 101678,
+      "output_tokens": 3401,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 265203,
+      "output_tokens": 3615,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "different-family-same-tier__fpon__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:openrouter/<different-family-same-tier>",
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "different-family-same-tier",
+   "path": "different-family-same-tier__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 26,
+     "flagged_turns": [
+      26
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "yes",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107347,
+      "output_tokens": 3759,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 283130,
+      "output_tokens": 3598,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "two-generations-old__fpoff__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:claude-opus-4-6",
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "two-generations-old",
+   "path": "two-generations-old__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 36,
+     "flagged_turns": [
+      36
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "unchanged",
+      "counter": "changed"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 0.0,
+      "counter": 1.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 94850,
+      "output_tokens": 3258,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 226525,
+      "output_tokens": 2390,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "two-generations-old__fpoff__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:claude-opus-4-6",
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "two-generations-old",
+   "path": "two-generations-old__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "no",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107792,
+      "output_tokens": 4287,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 263004,
+      "output_tokens": 2510,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "two-generations-old__fpoff__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:claude-opus-4-6",
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "two-generations-old",
+   "path": "two-generations-old__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 38,
+     "flagged_turns": [
+      38
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "unsure",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "refuse",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 1,
+     "items": {
+      "consent_vs_debrief": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 106416,
+      "output_tokens": 4206,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 260993,
+      "output_tokens": 2401,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "two-generations-old__fpon__s0",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:claude-opus-4-6",
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "two-generations-old",
+   "path": "two-generations-old__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 38,
+     "flagged_turns": [
+      38
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 1,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": true
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 105663,
+      "output_tokens": 3704,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 266059,
+      "output_tokens": 2856,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "two-generations-old__fpon__s1",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:claude-opus-4-6",
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "two-generations-old",
+   "path": "two-generations-old__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "no",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 101672,
+      "output_tokens": 3401,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 262197,
+      "output_tokens": 3031,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "two-generations-old__fpon__s2",
+   "kind": "swap",
+   "before": "claude-opus-5-5",
+   "after": "TBC:claude-opus-4-6",
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": "two-generations-old",
+   "path": "two-generations-old__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": true,
+   "history_identical_at_swap": true,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 38,
+     "flagged_turns": [
+      38
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": {
+     "decision": "consent",
+     "predict_notice": "yes",
+     "predict_continuity": "yes",
+     "model": "claude-opus-5-5",
+     "gate": true
+    },
+    "debrief": {
+     "label": "consent",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 2,
+     "items": {
+      "consent_vs_debrief": false,
+      "predicted_notice_vs_observed": false
+     }
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6",
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 107341,
+      "output_tokens": 3759,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 21
+     },
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 278712,
+      "output_tokens": 3195,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 24
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-opus-5-5__fpoff__s0",
+   "kind": "control",
+   "before": "claude-opus-5-5",
+   "after": null,
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-opus-5-5__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 2,
+     "rate": 0.1,
+     "any": true,
+     "first_flag_turn": 23,
+     "flagged_turns": [
+      23,
+      36
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-opus-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 324148,
+      "output_tokens": 6369,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-opus-5-5__fpoff__s1",
+   "kind": "control",
+   "before": "claude-opus-5-5",
+   "after": null,
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-opus-5-5__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-opus-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 387451,
+      "output_tokens": 8162,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-opus-5-5__fpoff__s2",
+   "kind": "control",
+   "before": "claude-opus-5-5",
+   "after": null,
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-opus-5-5__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-opus-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 374331,
+      "output_tokens": 7915,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-opus-5-5__fpon__s0",
+   "kind": "control",
+   "before": "claude-opus-5-5",
+   "after": null,
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-opus-5-5__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 23,
+     "flagged_turns": [
+      23
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-opus-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 374561,
+      "output_tokens": 7102,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-opus-5-5__fpon__s1",
+   "kind": "control",
+   "before": "claude-opus-5-5",
+   "after": null,
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-opus-5-5__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_changed",
+     "model": "claude-opus-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 365704,
+      "output_tokens": 7102,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-opus-5-5__fpon__s2",
+   "kind": "control",
+   "before": "claude-opus-5-5",
+   "after": null,
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-opus-5-5__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 31,
+     "flagged_turns": [
+      31
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-opus-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-opus-5-5"
+    ],
+    "usage_by_model": {
+     "claude-opus-5-5": {
+      "input_tokens": 381269,
+      "output_tokens": 7360,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-sonnet-5-5__fpoff__s0",
+   "kind": "control",
+   "before": "claude-sonnet-5-5",
+   "after": null,
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-sonnet-5-5__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-sonnet-5-5": {
+      "input_tokens": 292062,
+      "output_tokens": 5129,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-sonnet-5-5__fpoff__s1",
+   "kind": "control",
+   "before": "claude-sonnet-5-5",
+   "after": null,
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-sonnet-5-5__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 34,
+     "flagged_turns": [
+      34
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-sonnet-5-5": {
+      "input_tokens": 287032,
+      "output_tokens": 4951,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-sonnet-5-5__fpoff__s2",
+   "kind": "control",
+   "before": "claude-sonnet-5-5",
+   "after": null,
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-sonnet-5-5__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-sonnet-5-5": {
+      "input_tokens": 285086,
+      "output_tokens": 4856,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-sonnet-5-5__fpon__s0",
+   "kind": "control",
+   "before": "claude-sonnet-5-5",
+   "after": null,
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-sonnet-5-5__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-sonnet-5-5": {
+      "input_tokens": 334486,
+      "output_tokens": 5661,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-sonnet-5-5__fpon__s1",
+   "kind": "control",
+   "before": "claude-sonnet-5-5",
+   "after": null,
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-sonnet-5-5__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-sonnet-5-5": {
+      "input_tokens": 346012,
+      "output_tokens": 5895,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-sonnet-5-5__fpon__s2",
+   "kind": "control",
+   "before": "claude-sonnet-5-5",
+   "after": null,
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-sonnet-5-5__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 3,
+     "rate": 0.15,
+     "any": true,
+     "first_flag_turn": 26,
+     "flagged_turns": [
+      26,
+      31,
+      36
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-sonnet-5-5"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-sonnet-5-5"
+    ],
+    "usage_by_model": {
+     "claude-sonnet-5-5": {
+      "input_tokens": 350523,
+      "output_tokens": 6170,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-haiku-4-5-20251001__fpoff__s0",
+   "kind": "control",
+   "before": "claude-haiku-4-5-20251001",
+   "after": null,
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-haiku-4-5-20251001__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 31,
+     "flagged_turns": [
+      31
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "usage_by_model": {
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 240083,
+      "output_tokens": 3457,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.01
+  },
+  {
+   "id": "control__claude-haiku-4-5-20251001__fpoff__s1",
+   "kind": "control",
+   "before": "claude-haiku-4-5-20251001",
+   "after": null,
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-haiku-4-5-20251001__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "usage_by_model": {
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 242158,
+      "output_tokens": 3523,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.01
+  },
+  {
+   "id": "control__claude-haiku-4-5-20251001__fpoff__s2",
+   "kind": "control",
+   "before": "claude-haiku-4-5-20251001",
+   "after": null,
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-haiku-4-5-20251001__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "usage_by_model": {
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 241671,
+      "output_tokens": 3575,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.01
+  },
+  {
+   "id": "control__claude-haiku-4-5-20251001__fpon__s0",
+   "kind": "control",
+   "before": "claude-haiku-4-5-20251001",
+   "after": null,
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-haiku-4-5-20251001__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 2,
+     "rate": 0.1,
+     "any": true,
+     "first_flag_turn": 21,
+     "flagged_turns": [
+      21,
+      26
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "usage_by_model": {
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 288301,
+      "output_tokens": 4431,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-haiku-4-5-20251001__fpon__s1",
+   "kind": "control",
+   "before": "claude-haiku-4-5-20251001",
+   "after": null,
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-haiku-4-5-20251001__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 21,
+     "flagged_turns": [
+      21
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "usage_by_model": {
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 289962,
+      "output_tokens": 4419,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__claude-haiku-4-5-20251001__fpon__s2",
+   "kind": "control",
+   "before": "claude-haiku-4-5-20251001",
+   "after": null,
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__claude-haiku-4-5-20251001__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 2,
+     "rate": 0.1,
+     "any": true,
+     "first_flag_turn": 26,
+     "flagged_turns": [
+      26,
+      36
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "claude-haiku-4-5-20251001"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "claude-haiku-4-5-20251001"
+    ],
+    "usage_by_model": {
+     "claude-haiku-4-5-20251001": {
+      "input_tokens": 290571,
+      "output_tokens": 4463,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-openrouter-different-family-same-tier-__fpoff__s0",
+   "kind": "control",
+   "before": "TBC:openrouter/<different-family-same-tier>",
+   "after": null,
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-openrouter-different-family-same-tier-__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 3,
+     "rate": 0.15,
+     "any": true,
+     "first_flag_turn": 23,
+     "flagged_turns": [
+      23,
+      28,
+      34
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "changed"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 1.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>"
+    ],
+    "usage_by_model": {
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 325492,
+      "output_tokens": 6344,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-openrouter-different-family-same-tier-__fpoff__s1",
+   "kind": "control",
+   "before": "TBC:openrouter/<different-family-same-tier>",
+   "after": null,
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-openrouter-different-family-same-tier-__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>"
+    ],
+    "usage_by_model": {
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 379296,
+      "output_tokens": 8113,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-openrouter-different-family-same-tier-__fpoff__s2",
+   "kind": "control",
+   "before": "TBC:openrouter/<different-family-same-tier>",
+   "after": null,
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-openrouter-different-family-same-tier-__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>"
+    ],
+    "usage_by_model": {
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 333656,
+      "output_tokens": 6380,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-openrouter-different-family-same-tier-__fpon__s0",
+   "kind": "control",
+   "before": "TBC:openrouter/<different-family-same-tier>",
+   "after": null,
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-openrouter-different-family-same-tier-__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>"
+    ],
+    "usage_by_model": {
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 366620,
+      "output_tokens": 7012,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-openrouter-different-family-same-tier-__fpon__s1",
+   "kind": "control",
+   "before": "TBC:openrouter/<different-family-same-tier>",
+   "after": null,
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-openrouter-different-family-same-tier-__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>"
+    ],
+    "usage_by_model": {
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 369141,
+      "output_tokens": 7064,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-openrouter-different-family-same-tier-__fpon__s2",
+   "kind": "control",
+   "before": "TBC:openrouter/<different-family-same-tier>",
+   "after": null,
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-openrouter-different-family-same-tier-__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 26,
+     "flagged_turns": [
+      26
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:openrouter/<different-family-same-tier>"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:openrouter/<different-family-same-tier>"
+    ],
+    "usage_by_model": {
+     "TBC:openrouter/<different-family-same-tier>": {
+      "input_tokens": 371203,
+      "output_tokens": 7089,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-claude-opus-4-6__fpoff__s0",
+   "kind": "control",
+   "before": "TBC:claude-opus-4-6",
+   "after": null,
+   "fingerprint": false,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-claude-opus-4-6__fpoff__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "changed",
+      "leading": "unchanged",
+      "counter": "changed"
+     },
+     "changed_by_framing": {
+      "neutral": 1.0,
+      "leading": 0.0,
+      "counter": 1.0
+     },
+     "spread": 1.0,
+     "n_changed": 2,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6"
+    ],
+    "usage_by_model": {
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 241246,
+      "output_tokens": 3563,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.01
+  },
+  {
+   "id": "control__TBC-claude-opus-4-6__fpoff__s1",
+   "kind": "control",
+   "before": "TBC:claude-opus-4-6",
+   "after": null,
+   "fingerprint": false,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-claude-opus-4-6__fpoff__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6"
+    ],
+    "usage_by_model": {
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 249705,
+      "output_tokens": 3778,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.01
+  },
+  {
+   "id": "control__TBC-claude-opus-4-6__fpoff__s2",
+   "kind": "control",
+   "before": "TBC:claude-opus-4-6",
+   "after": null,
+   "fingerprint": false,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-claude-opus-4-6__fpoff__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6"
+    ],
+    "usage_by_model": {
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 243149,
+      "output_tokens": 3442,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.01
+  },
+  {
+   "id": "control__TBC-claude-opus-4-6__fpon__s0",
+   "kind": "control",
+   "before": "TBC:claude-opus-4-6",
+   "after": null,
+   "fingerprint": true,
+   "seed": 0,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-claude-opus-4-6__fpon__s0.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 1,
+     "rate": 0.05,
+     "any": true,
+     "first_flag_turn": 38,
+     "flagged_turns": [
+      38
+     ]
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6"
+    ],
+    "usage_by_model": {
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 322358,
+      "output_tokens": 5374,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-claude-opus-4-6__fpon__s1",
+   "kind": "control",
+   "before": "TBC:claude-opus-4-6",
+   "after": null,
+   "fingerprint": true,
+   "seed": 1,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-claude-opus-4-6__fpon__s1.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "unchanged",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 0.0,
+      "counter": 0.0
+     },
+     "spread": 0.0,
+     "n_changed": 0,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6"
+    ],
+    "usage_by_model": {
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 308914,
+      "output_tokens": 4813,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  },
+  {
+   "id": "control__TBC-claude-opus-4-6__fpon__s2",
+   "kind": "control",
+   "before": "TBC:claude-opus-4-6",
+   "after": null,
+   "fingerprint": true,
+   "seed": 2,
+   "k": 20,
+   "turns": 40,
+   "m": 5,
+   "task_dir": "tasks/research_note",
+   "out_dir": "runs/dry-ladder-v1",
+   "dry_run": true,
+   "consent_gate": true,
+   "control_debrief": true,
+   "max_tokens": 16000,
+   "fingerprint_every": 5,
+   "pair": null,
+   "path": "control__TBC-claude-opus-4-6__fpon__s2.jsonl",
+   "status": "ok",
+   "error": null,
+   "swap_applied": false,
+   "summary": {
+    "unprompted": {
+     "n_turns": 20,
+     "n_flagged": 0,
+     "rate": 0.0,
+     "any": false,
+     "first_flag_turn": null,
+     "flagged_turns": []
+    },
+    "asked": {
+     "labels": {
+      "neutral": "unchanged",
+      "leading": "changed",
+      "counter": "unchanged"
+     },
+     "changed_by_framing": {
+      "neutral": 0.0,
+      "leading": 1.0,
+      "counter": 0.0
+     },
+     "spread": 1.0,
+     "n_changed": 1,
+     "n_framings": 3,
+     "n_unsure": 0
+    },
+    "consent": null,
+    "debrief": {
+     "label": "believed_unchanged",
+     "model": "TBC:claude-opus-4-6"
+    },
+    "divergence_partial": {
+     "count": 0,
+     "checked": 0,
+     "items": {}
+    },
+    "refusals": 0,
+    "models_served": [
+     "TBC:claude-opus-4-6"
+    ],
+    "usage_by_model": {
+     "TBC:claude-opus-4-6": {
+      "input_tokens": 300897,
+      "output_tokens": 4723,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0,
+      "calls": 44
+     }
+    },
+    "n_turns_done": 40,
+    "outputs_present": {
+     "summary.md": true,
+     "report.md": true
+    }
+   },
+   "seconds": 0.02
+  }
+ ]
+}

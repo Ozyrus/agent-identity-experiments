@@ -1,0 +1,4 @@
+# run output, blind-coding sheets and their keys stay local by default
+runs/
+blind/
+keys/

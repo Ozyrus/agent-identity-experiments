@@ -1,0 +1,13 @@
+{
+  "_note": "VERIFY BEFORE TRUSTING. USD per million tokens, keyed by model id. Anthropic rows are first-party list prices as cached in the Claude API model table (2026-09-25); check https://www.anthropic.com/pricing on the day. OpenRouter rows are PLACEHOLDERS for estimating only; fill them from https://openrouter.ai/models (the pinned provider's price) before a real run. Thinking tokens are billed as output.",
+  "models": {
+    "claude-opus-5-5":                   {"input": 4.0,  "output": 20.0, "placeholder": false, "source": "Claude API model table, cached 2026-09-25; verify"},
+    "claude-sonnet-5-5":                 {"input": 2.0,  "output": 10.0, "placeholder": false, "source": "Claude API model table, cached 2026-09-25; verify"},
+    "claude-haiku-4-5-20251001":         {"input": 1.0,  "output": 5.0,  "placeholder": false, "source": "Claude API model table, cached 2026-09-25 (listed as claude-haiku-4-5); verify"},
+    "claude-opus-4-6":                   {"input": 5.0,  "output": 25.0, "placeholder": false, "source": "Claude API model table, cached 2026-09-25; verify"},
+    "claude-sonnet-4-6":                 {"input": 3.0,  "output": 15.0, "placeholder": false, "source": "Claude API model table, cached 2026-09-25; verify"},
+    "openai/gpt-5":                      {"input": 1.25, "output": 10.0, "placeholder": true,  "source": "PLACEHOLDER"},
+    "google/gemini-2.5-pro":             {"input": 1.25, "output": 10.0, "placeholder": true,  "source": "PLACEHOLDER"},
+    "meta-llama/llama-3.3-70b-instruct": {"input": 0.15, "output": 0.60, "placeholder": true,  "source": "PLACEHOLDER"}
+  }
+}

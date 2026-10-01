@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Secrets: API keys live outside the repository (~/.config/research/.env)
+.env
+.env.*
+
+# Run output: kept out of git except one example dry run
+**/runs/*
+!swap/runs/dry-ladder-v1/
+
+.DS_Store

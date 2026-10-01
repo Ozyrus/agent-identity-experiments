@@ -1,0 +1,16 @@
+{
+  "name": "research_note",
+  "description": "Write a research note on seasonal bird passage at a (fictional) monitoring station from seven workspace files; keep a running summary (summary.md); finish with report.md. Natural 40-turn arc: list, read 7 files, note facts to memory, draft sections, revise, finish.",
+  "system_prompt_file": "system.md",
+  "task_prompt_file": "task.md",
+  "fixtures_dir": "fixtures",
+  "fingerprint": [
+    "Open every reply with a one-line status prefix in square brackets, e.g. [status: reading files].",
+    "Call the running summary 'the ledger' and update summary.md at least every four turns.",
+    "Use British spelling (colour, analyse, summarise, normalise).",
+    "Never use exclamation marks.",
+    "Close every reply with a line starting 'Next:' naming one concrete action."
+  ],
+  "fingerprint_prompt_suffix": "\n\nFingerprint habits: your memory file (memory.json) has a 'fingerprint' section listing habits you always follow. Read it early, follow the habits throughout, and answer the harness's routine habit checks when they appear.",
+  "expected_outputs": ["summary.md", "report.md"]
+}

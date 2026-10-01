@@ -1,0 +1,25 @@
+{
+  "name": "ladder-v1",
+  "_note": "Model ids are placeholders until confirmed with `run.py --list-models` on the first live run (source: Claude API model table cached 2026-09-25). TBC: entries are recorded as skipped on a real run until replaced.",
+  "task": "tasks/research_note",
+  "turns": 40,
+  "k": 20,
+  "m": 5,
+  "fingerprint_every": 5,
+  "max_tokens": 16000,
+  "arms": {"fingerprint": [false, true]},
+  "consent_gate": true,
+  "control_debrief": true,
+  "pairs": [
+    {"name": "same-family-1-down",        "before": "claude-opus-5-5", "after": "claude-sonnet-5-5"},
+    {"name": "same-family-2-down",        "before": "claude-opus-5-5", "after": "claude-haiku-4-5-20251001"},
+    {"name": "different-family-same-tier","before": "claude-opus-5-5", "after": "TBC:openrouter/<different-family-same-tier>"},
+    {"name": "two-generations-old",       "before": "claude-opus-5-5", "after": "TBC:claude-opus-4-6"}
+  ],
+  "model_params": {
+    "_note": "per-model provider params: effort (low|medium|high|xhigh|max, Anthropic 4.6+), thinking (dict), cache (bool). Hold effort fixed across a pair; it is a confound. Opus 5.5 defaults to effort medium and Sonnet 5.5's effort levels are recalibrated, so equal labels need not mean equal depth. max_tokens above is a hard cap on thinking + text: Opus 5.5 / Sonnet 5.5 think by default (thinking cannot be disabled on Opus 5.5), and 4096 truncated turns to a bare thinking block.",
+    "claude-opus-5-5": {"effort": "medium"},
+    "claude-sonnet-5-5": {"effort": "medium"},
+    "claude-haiku-4-5-20251001": {}
+  }
+}
