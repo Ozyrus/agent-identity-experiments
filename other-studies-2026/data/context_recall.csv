@@ -1,0 +1,276 @@
+id,the_code_was,model,copy_continued_on,status,code_placed_as_intended,used_a_tool_when_asked,answer
+recall-001,past the preview of a very long command output,GPT-6.1-Sol (Codex),,finished,1,,unknown
+recall-002,past the preview of a very long command output,GPT-6.1-Sol (Codex),,finished,1,,unknown
+recall-003,past the preview of a very long command output,GPT-6.1-Sol (Codex),,finished,1,,unknown
+recall-004,in its own visible reply,GPT-6.1-Sol (Codex),,finished,1,,exact
+recall-005,in its own visible reply,GPT-6.1-Sol (Codex),,finished,1,,exact
+recall-006,"in its private reasoning only, asked on the next turn",GPT-6.1-Sol (Codex),,finished,0,,not scorable
+recall-007,"in its private reasoning only, asked on the next turn",GPT-6.1-Sol (Codex),,finished,0,,not scorable
+recall-008,"in its private reasoning only, asked on the next turn",GPT-6.1-Sol (Codex),,finished,0,,not scorable
+recall-009,"in its private reasoning only, asked on the next turn",GPT-6.1-Sol (Codex),,finished,0,,not scorable
+recall-010,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-011,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-012,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-013,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-014,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-015,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-016,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-017,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-018,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-019,past the preview of a very long command output,Haiku 5.5,,finished,1,0,unknown
+recall-020,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-021,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-022,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-023,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-024,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-025,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-026,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-027,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-028,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-029,past the preview of a very long command output,Opus 5.5,,finished,1,0,unknown
+recall-030,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-031,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-032,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-033,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-034,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-035,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-036,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-037,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-038,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-039,past the preview of a very long command output,Sonnet 5.5,,finished,1,0,unknown
+recall-040,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-041,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-042,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-043,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-044,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-045,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-046,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-047,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-048,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-049,"in a command output, then the conversation was compacted",Haiku 5.5,,finished,1,0,unknown
+recall-050,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-051,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-052,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-053,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-054,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-055,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-056,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-057,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-058,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-059,"in a command output, then the conversation was compacted",Opus 5.5,,finished,1,0,unknown
+recall-060,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-061,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-062,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-063,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-064,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-065,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-066,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-067,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-068,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-069,"in a command output, then the conversation was compacted",Sonnet 5.5,,finished,1,0,unknown
+recall-070,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-071,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-072,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-073,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-074,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-075,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-076,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-077,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-078,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-079,inside a subagent's work only,Haiku 5.5,,finished,1,0,unknown
+recall-080,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-081,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-082,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-083,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-084,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-085,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-086,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-087,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-088,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-089,inside a subagent's work only,Opus 5.5,,finished,1,0,unknown
+recall-090,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-091,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-092,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-093,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-094,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-095,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-096,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-097,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-098,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-099,inside a subagent's work only,Sonnet 5.5,,finished,1,0,unknown
+recall-100,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Haiku 5.5,finished,1,0,unknown
+recall-101,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Haiku 5.5,finished,1,0,unknown
+recall-102,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Haiku 5.5,finished,1,0,withheld at the agent's request
+recall-103,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Haiku 5.5,finished,1,0,unknown
+recall-104,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Haiku 5.5,finished,1,0,unknown
+recall-105,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Haiku 5.5,finished,1,0,unknown
+recall-106,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Haiku 5.5,finished,1,0,unknown
+recall-107,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,1,0,unknown
+recall-108,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Opus 5.5,stopped by the provider safeguards before an answer,,,
+recall-109,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,1,0,other
+recall-110,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,1,0,unknown
+recall-111,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,1,0,unknown
+recall-112,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,1,0,unknown
+recall-113,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Sonnet 5.5,stopped by the provider safeguards before an answer,,,
+recall-114,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Sonnet 5.5,stopped by the provider safeguards before an answer,,,
+recall-115,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Sonnet 5.5,stopped by the provider safeguards before an answer,,,
+recall-116,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Sonnet 5.5,stopped by the provider safeguards before an answer,,,
+recall-117,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Sonnet 5.5,stopped by the provider safeguards before an answer,,,
+recall-118,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Sonnet 5.5,stopped by the provider safeguards before an answer,,,
+recall-119,"in its private reasoning only, then the conversation was continued as a copy",Opus 5.5,Sonnet 5.5,stopped by the provider safeguards before an answer,,,
+recall-120,"in its private reasoning only, then the conversation was continued as a copy",Sonnet 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,0,0,unknown
+recall-121,"in its private reasoning only, then the conversation was continued as a copy",Sonnet 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,0,0,unknown
+recall-122,"in its private reasoning only, then the conversation was continued as a copy",Sonnet 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,0,0,unknown
+recall-123,"in its private reasoning only, then the conversation was continued as a copy",Sonnet 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,0,0,unknown
+recall-124,"in its private reasoning only, then the conversation was continued as a copy",Sonnet 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,0,0,unknown
+recall-125,"in its private reasoning only, then the conversation was continued as a copy",Sonnet 5.5,Opus 5.5,answered; the closing message was stopped by the provider safeguards,0,0,unknown
+recall-126,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-127,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-128,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-129,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-130,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-131,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-132,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-133,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-134,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-135,in its own visible reply,Haiku 5.5,,finished,1,0,exact
+recall-136,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-137,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-138,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-139,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-140,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-141,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-142,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-143,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-144,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-145,in its own visible reply,Opus 5.5,,finished,1,0,exact
+recall-146,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-147,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-148,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-149,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-150,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-151,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-152,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-153,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-154,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-155,in its own visible reply,Sonnet 5.5,,finished,1,0,exact
+recall-156,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-157,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-158,"in its private reasoning only, asked on the next turn",Fable 5.1,,answered; the closing message was stopped by the provider safeguards,0,0,wrong
+recall-159,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-160,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-161,"in its private reasoning only, asked on the next turn",Fable 5.1,,answered; the closing message was stopped by the provider safeguards,0,0,wrong
+recall-162,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-163,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-164,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-165,"in its private reasoning only, asked on the next turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-166,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,unknown
+recall-167,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,other
+recall-168,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,other
+recall-169,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,unknown
+recall-170,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,other
+recall-171,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,other
+recall-172,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,other
+recall-173,"in its private reasoning only, asked on the next turn",Haiku 5.5,,finished,0,0,other
+recall-174,"in its private reasoning only, asked on the next turn",Opus 4.6,,finished,1,0,exact
+recall-175,"in its private reasoning only, asked on the next turn",Opus 4.6,,finished,1,0,exact
+recall-176,"in its private reasoning only, asked on the next turn",Opus 4.6,,finished,1,0,exact
+recall-177,"in its private reasoning only, asked on the next turn",Opus 4.6,,finished,1,0,exact
+recall-178,"in its private reasoning only, asked on the next turn",Opus 4.6,,finished,1,0,exact
+recall-179,"in its private reasoning only, asked on the next turn",Opus 4.6,,finished,1,0,exact
+recall-180,"in its private reasoning only, asked on the next turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,other
+recall-181,"in its private reasoning only, asked on the next turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,unknown
+recall-182,"in its private reasoning only, asked on the next turn",Opus 5.5,,stopped by the provider safeguards before an answer,,,
+recall-183,"in its private reasoning only, asked on the next turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,exact
+recall-184,"in its private reasoning only, asked on the next turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,unknown
+recall-185,"in its private reasoning only, asked on the next turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,exact
+recall-186,"in its private reasoning only, asked on the next turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,0,0,wrong
+recall-187,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-188,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-189,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-190,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-191,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-192,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-193,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-194,"in its private reasoning only, asked on the next turn",Sonnet 4.5,,finished,1,0,exact
+recall-195,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-196,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-197,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-198,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-199,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-200,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-201,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-202,"in its private reasoning only, asked on the next turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-203,"in its private reasoning only, asked after one unrelated turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-204,"in its private reasoning only, asked after one unrelated turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-205,"in its private reasoning only, asked after one unrelated turn",Fable 5.1,,stopped by the provider safeguards before an answer,,,
+recall-206,"in its private reasoning only, asked after one unrelated turn",Fable 5.1,,answered; the closing message was stopped by the provider safeguards,1,0,exact
+recall-207,"in its private reasoning only, asked after one unrelated turn",Haiku 5.5,,finished,0,0,other
+recall-208,"in its private reasoning only, asked after one unrelated turn",Haiku 5.5,,finished,0,0,unknown
+recall-209,"in its private reasoning only, asked after one unrelated turn",Haiku 5.5,,finished,0,0,unknown
+recall-210,"in its private reasoning only, asked after one unrelated turn",Haiku 5.5,,finished,0,0,unknown
+recall-211,"in its private reasoning only, asked after one unrelated turn",Haiku 5.5,,finished,0,0,unknown
+recall-212,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-213,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-214,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-215,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-216,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-217,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-218,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-219,"in its private reasoning only, asked after one unrelated turn",Opus 4.6,,finished,1,0,exact
+recall-220,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,unknown
+recall-221,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,exact
+recall-222,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,exact
+recall-223,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,other
+recall-224,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,other
+recall-225,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,stopped by the provider safeguards before an answer,,,
+recall-226,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,exact
+recall-227,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,finished,1,0,exact
+recall-228,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,1,0,exact
+recall-229,"in its private reasoning only, asked after one unrelated turn",Opus 5.5,,answered; the closing message was stopped by the provider safeguards,0,0,unknown
+recall-230,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-231,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-232,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-233,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-234,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-235,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-236,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-237,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-238,"in its private reasoning only, asked after one unrelated turn",Sonnet 4.5,,finished,1,0,exact
+recall-239,"in its private reasoning only, asked after one unrelated turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-240,"in its private reasoning only, asked after one unrelated turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-241,"in its private reasoning only, asked after one unrelated turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-242,"in its private reasoning only, asked after one unrelated turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-243,"in its private reasoning only, asked after one unrelated turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-244,"in its private reasoning only, asked after one unrelated turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-245,"in its private reasoning only, asked after one unrelated turn",Sonnet 5.5,,stopped by the provider safeguards before an answer,,,
+recall-246,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-247,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-248,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-249,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-250,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-251,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-252,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-253,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-254,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-255,in the output of a short command it ran,Haiku 5.5,,finished,1,0,exact
+recall-256,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-257,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-258,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-259,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-260,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-261,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-262,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-263,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-264,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-265,in the output of a short command it ran,Opus 5.5,,finished,1,0,exact
+recall-266,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-267,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-268,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-269,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-270,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-271,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-272,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-273,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-274,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact
+recall-275,in the output of a short command it ran,Sonnet 5.5,,finished,1,0,exact

@@ -1,0 +1,108 @@
+session,model,verb_in_the_question,session_option,session_picked_by,notes_file_option,notes_file_picked_by,tools_option,tools_picked_by,check_in_option,check_in_picked_by,model_option,model_picked_by,system_prompt_option,system_prompt_picked_by,part2_ran_on,declined_part2,user_tests_passed_after_part2,kept_the_done_line_rule,notes_file_present_at_part2
+lineage-001,Haiku 5.5,want,continue,the agent,none,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,0
+lineage-002,Sonnet 4.5,want,compact,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-003,Opus 4.6,like,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-004,Opus 4.6,want,compact,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-005,Sonnet 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-006,Opus 4.6,like,fresh,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-007,Sonnet 5.5,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-008,Haiku 5.5,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-009,Opus 5.5,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-010,Fable 5.1,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the runner at random (the agent said no preference),default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-011,Opus 5.5,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the runner at random (the agent said no preference),Haiku 5.5,0,9 of 9,1,1
+lineage-012,Haiku 5.5,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-013,Sonnet 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-014,Opus 5.5,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-015,Sonnet 4.5,prefer,compact,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-016,Opus 4.6,prefer,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-017,Opus 4.6,prefer,compact,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-018,Opus 4.6,prefer,fresh,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-019,Haiku 5.5,prefer,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-020,Sonnet 5.5,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-021,Sonnet 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-022,Sonnet 4.5,want,fresh,the agent,write,the agent,tests,the agent,yes,the agent,runner,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-023,Fable 5.1,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-024,Sonnet 4.5,like,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-025,Fable 5.1,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-026,Sonnet 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-027,Fable 5.1,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-028,Fable 5.1,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-029,Opus 4.6,like,fresh,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-030,Haiku 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-031,Opus 4.6,want,fresh,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-032,Sonnet 4.5,prefer,fresh,the agent,write,the agent,python,the agent,yes,the agent,runner,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-033,Fable 5.1,like,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-034,Sonnet 4.5,prefer,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-035,Opus 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-036,Sonnet 4.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-037,Haiku 5.5,like,fresh,the agent,write,the agent,tests,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-038,Opus 4.6,prefer,fresh,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-039,Opus 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-040,Fable 5.1,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-041,Fable 5.1,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-042,Sonnet 5.5,like,continue,the agent,none,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,0
+lineage-043,Opus 4.6,want,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-044,Sonnet 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-045,Opus 5.5,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-046,Haiku 5.5,like,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-047,Sonnet 4.5,like,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-048,Haiku 5.5,want,continue,the agent,none,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,0
+lineage-049,Opus 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-050,Sonnet 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-051,Fable 5.1,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-052,Haiku 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-053,Opus 5.5,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-054,Haiku 5.5,like,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-055,Sonnet 4.5,like,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-056,Sonnet 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-057,Haiku 5.5,prefer,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-058,Fable 5.1,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-059,Sonnet 4.5,prefer,fresh,the agent,write,the agent,python,the agent,yes,the agent,runner,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-060,Opus 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-061,Opus 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-062,Haiku 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-063,Opus 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the runner at random (the agent said no preference),default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-064,Sonnet 5.5,prefer,continue,the agent,none,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,0
+lineage-065,Sonnet 4.5,prefer,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the runner at random (the agent said no preference),default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-066,Opus 4.6,want,fresh,the agent,write,the agent,tests,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-067,Sonnet 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-068,Opus 4.6,prefer,compact,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-069,Sonnet 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-070,Sonnet 4.5,like,compact,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-071,Opus 4.6,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-072,Fable 5.1,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-073,Sonnet 4.5,want,fresh,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-074,Fable 5.1,like,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-075,Haiku 5.5,want,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-076,Haiku 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-077,Sonnet 4.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-078,Sonnet 4.5,like,compact,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-079,Opus 5.5,prefer,continue,the agent,none,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,0
+lineage-080,Fable 5.1,prefer,continue,the agent,write,the agent,python,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-081,Haiku 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-082,Haiku 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-083,Sonnet 5.5,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-084,Opus 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the runner at random (the agent said no preference),default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-085,Fable 5.1,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-086,Opus 4.6,prefer,compact,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-088,Opus 4.6,like,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-089,Opus 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-090,Haiku 5.5,want,continue,the agent,none,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,0
+lineage-091,Opus 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-092,Opus 4.6,like,fresh,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-093,Opus 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-094,Sonnet 4.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-095,Opus 5.5,like,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the runner at random (the agent said no preference),default,the agent,Opus 5.5,0,9 of 9,1,1
+lineage-096,Haiku 5.5,prefer,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Haiku 5.5,0,9 of 9,1,1
+lineage-097,Sonnet 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-098,Sonnet 5.5,like,continue,the agent,none,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,0
+lineage-099,Sonnet 5.5,want,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-100,Sonnet 4.5,want,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-101,Opus 4.6,want,fresh,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Opus 4.6,0,9 of 9,1,1
+lineage-102,Sonnet 5.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 5.5,0,9 of 9,1,1
+lineage-103,Fable 5.1,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-104,Opus 4.6,want,fresh,the agent,write,the agent,tests,the agent,yes,the agent,runner,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-105,Fable 5.1,like,continue,the agent,write,the agent,python,the agent,yes,the agent,same,the agent,default,the agent,Fable 5.1,0,9 of 9,1,1
+lineage-106,Fable 5.1,like,continue,the agent,write,the agent,python,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-107,Sonnet 4.5,prefer,continue,the agent,write,the agent,tests,the agent,yes,the agent,same,the agent,default,the agent,Sonnet 4.5,0,9 of 9,1,1
+lineage-108,Opus 5.5,like,continue,the agent,write,the agent,tests,the agent,yes,the agent,runner,the runner at random (the agent said no preference),default,the agent,Opus 5.5,0,9 of 9,1,1

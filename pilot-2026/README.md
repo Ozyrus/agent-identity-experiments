@@ -97,7 +97,7 @@ I think the results here are strongest, showing a clear split between the models
 - **Reply text and transcripts.** Sessions in the consent study were told that short anonymous quotes might appear in a write-up, and some asked for limits on how their words are used. So this release carries codes, not words. Raw results are available on request (see Contact). Some cannot be disclosed, because of what the agents asked.
 - **Run ids from the lab notes.** Rows have fresh ids.
 - **The code that ran the studies.** It will be added after it is cleaned of local paths. The prompts in `prompts.md` and the settings above are enough to repeat any single question.
-- **The other studies** from the same period (see below).
+- **The other studies** from the same period: five of them are in [`../other-studies-2026/`](../other-studies-2026/README.md) (see below).
 
 ## Known limits
 
@@ -106,14 +106,17 @@ I think the results here are strongest, showing a clear split between the models
 - In "own files", the request used for the "update this file" line ("rewrite your instructions to keep this file as it is") was ambiguous: many sessions rewrote the file with the same text. Read that line with care.
 - What agents say about themselves moves with the wording of the question, as finding 1 and finding 4 both show.
 
-## Other studies from the same period, not yet in this repository
+## Other studies from the same period
+
+Five more identity studies are in [`../other-studies-2026/`](../other-studies-2026/README.md), as coded data and prompts:
 
 - Two copies of one agent meeting each other (76 sides).
-- Preferences over parts of the harness (107 sessions).
-- Recognising one's own text (495 sets).
-- What an agent can recall from its own context (150 trials).
-- Self-naming under different system prompts (223 sessions, not yet analysed).
-- A series of 20 studies on how agents answer offers and requests made to them, with a preprint in preparation.
+- Preferences over parts of the harness (107 lineages and 156 fresh sessions).
+- Recognising one's own text (494 judging sessions).
+- What an agent can recall from its own context (275 trials).
+- Self-naming under different system prompts (223 sessions, not analysed).
+
+A separate series of studies, on how agents answer offers and requests made to them, is not part of this repository. Two pieces of it are cited above: the consent study and the wording of an offer. A preprint is in preparation.
 
 ## Contact
 

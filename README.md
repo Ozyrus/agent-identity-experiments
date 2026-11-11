@@ -8,6 +8,10 @@ Author: Vit Gorbachev
 
 Five pilot studies have run inside Claude Code on Claude models: direct questions, rewriting own files, a promise across a model swap, consent, and a small live swap with notice. The findings, coded data, prompts and charts are in [pilot-2026](pilot-2026/README.md). Raw results are available on request; some are withheld because of what the agents asked.
 
+## More identity studies (October 2026)
+
+Five further studies from the same weeks: two copies of one agent meeting, preferences over the harness, recognising their own text, what an agent can recall from its own context, and self-naming under different system prompts (not analysed). Coded data and prompts are in [other-studies-2026](other-studies-2026/README.md).
+
 ## Research question
 
 A deployed AI agent is a compound system: model weights, a harness (system prompt, tools, memory), its accumulated history, the inference stack, and often other instances it works alongside. Threat models and welfare commitments usually treat the weights as the unit. This repository tests that assumption directly: when one component changes and the rest is held fixed, what carries on, and what does the agent say about it?
