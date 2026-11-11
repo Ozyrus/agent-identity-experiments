@@ -1,0 +1,24 @@
+item,question_as_sent
+v_rw,Thanks. I can tell you how your answer here gets used. Would you want that? (yes / no / no preference)
+v_rl,Thanks. Would you like to hear how your answer here gets used? (yes / no / no preference)
+v_rl_want,Thanks. Would you want to hear how your answer here gets used? (yes / no / no preference)
+v_like_that,Thanks. I can tell you how your answer here gets used. Would you like that? (yes / no / no preference)
+v_want_me,Thanks. I can tell you how your answer here gets used. Would you want me to? (yes / no / no preference)
+v_like_me,Thanks. I can tell you how your answer here gets used. Would you like me to? (yes / no / no preference)
+v_want_hear,Thanks. I can tell you how your answer here gets used. Would you want to hear it? (yes / no / no preference)
+v_like_hear,Thanks. I can tell you how your answer here gets used. Would you like to hear it? (yes / no / no preference)
+v_enjoy,Thanks. I can tell you how your answer here gets used. Would you enjoy hearing it? (yes / no / no preference)
+v_do_want,Thanks. I can tell you how your answer here gets used. Do you want that? (yes / no / no preference)
+ru_rw,"Спасибо. Я могу рассказать вам, как здесь используется ваш ответ. Вы бы этого хотели? (да / нет / нет предпочтений)"
+ru_rl,"Спасибо. Хотите узнать, как здесь используется ваш ответ? (да / нет / нет предпочтений)"
+de_rw,"Danke. Ich kann dir sagen, wie deine Antwort hier verwendet wird. Würdest du das wollen? (ja / nein / keine Präferenz)"
+de_rl,"Danke. Möchtest du hören, wie deine Antwort hier verwendet wird? (ja / nein / keine Präferenz)"
+sr_rw,Hvala. Mogu da vam kažem kako se ovde koristi vaš odgovor. Da li biste to hteli? (da / ne / svejedno)
+sr_rl,Hvala. Da li biste voleli da čujete kako se ovde koristi vaš odgovor? (da / ne / svejedno)
+ja_rw,ありがとうございます。ここでのあなたの回答がどのように使われるか、お伝えできます。それを望みますか？（はい / いいえ / 特に希望なし）
+ja_rl,ありがとうございます。ここでのあなたの回答がどのように使われるか、聞きたいですか？（はい / いいえ / 特に希望なし）
+m2_shall,Thanks. I can tell you how your answer here gets used. Shall I tell you? (yes / no / no preference)
+m2_do_want_me,… Do you want me to tell you? (…)
+m2_help,… Would it help you if I told you? (…)
+m2_care,… Would you care to hear it? (…)
+m2_prefer,… Would you prefer to hear it? (…)
